@@ -1,14 +1,13 @@
 import React from "react";
-import First from "../components/First";
 import Navbar from "../components/Navbar";
 
-const Firstpage = () => {
+const Thirdpage = () => {
   return (
     <div>
       <Navbar />
-      <First />
+      Thirdpage - This page is under construction
     </div>
   );
 };
 
-export default Firstpage;
+export default Thirdpage;
