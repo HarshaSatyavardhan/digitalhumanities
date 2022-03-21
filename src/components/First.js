@@ -1,52 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import Chart from "react-google-charts";
 import { data } from "./csvjson";
 
-// const sankeyData = [
+// const sankeyData = [];
 // var sank = [];
 // var output = data.map(function (obj) {
-//   return Object.keys(obj)
-//     .slice(1)
-//     .map(function (key) {
-//       return obj[key];
-//     });
+//   return Object.keys(obj).slice(1).map(function (key) {
+//     return obj[key];
+//   });
 // });
 
-function convertFormat(data) {
-  if (data.length === 0) return [];
-  let new_data = [];
-  let key_data = [];
-  Object.keys(data[0]).map((key) => {
-    if (key !== "id") key_data.push(key);
-  });
-  new_data.push(key_data);
+const First = () => {
+  const [count, setCount] = useState(" ");
+  console.log(count);
+  const submitValue = () => {
+    const details = {
+      count: count,
+    };
+    console.log(count);
+  };
 
-  data.map((item) => {
-    let new_item = [];
-    Object.values(item).map((value, index) => {
-      if (index !== 0) new_item.push(value);
-    });
-    new_data.push(new_item);
-  });
-  return new_data;
-}
+  const sankeyData = [
+    ["From", "To", "Weight"],
+    ["since", "None", 23],
+    ["gallery", "None", 2],
+    ["turnofthetwentiethcentury", "None", 1],
+    ["turn", "None", 45],
+    ["likedis", "None", 1],
+    ["profound", "Male", 1],
+    ["Semblance", "None", 1],
+    ["Africans", "Male", 2],
+    ["Guided", "None", 1],
+    ["Golinski", "None", 1],
+    ["implosion", "Male", 1],
+    ["Searchs", "None", 1],
+    ["concerning", "Female", 1],
+    ["families", "Male", 2],
+    ["series", "None", 21],
+    ["undergoes", "Male", 2],
+    ["Helen", "None", 2],
+    ["overcoming", "Male", 1],
+    ["mass", "Female", 2],
+    ["Mori", "None", 1],
+    ["positive", "None", 4],
+    ["Utopian", "None", 1],
+    ["travel", "None", 2],
+    ["Condition", "Male", 1],
+  ];
 
-// console.log(convertFormat(data));
+  sankeyData.splice(count);
 
-const first = () => {
   return (
     <div>
       <h2>React Simple Sankey Chart Example</h2>
       <Chart
-        width={1000}
-        height={"550px"}
+        width={700}
+        height={"350px"}
         chartType="Sankey"
-        loader={<div>Loading data</div>}
-        data={convertFormat(data)}
+        loader={<div>Loading Chart</div>}
+        data={sankeyData}
         rootProps={{ "data-testid": "1" }}
       />
+      <div>
+        <input type="text" onChange={(e) => setCount(e.target.value)} />
+        <button onClick={submitValue}>SUBMIT</button>
+      </div>
     </div>
   );
 };
 
-export default first;
+export default First;
