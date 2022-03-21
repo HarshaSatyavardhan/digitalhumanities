@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Firstpage />} />
+        <Route path="Viz-1" element={<Firstpage />} />
         <Route path="Viz-2" element={<Secondpage />} />
         <Route path="Viz-3" element={<Thirdpage />} />
       </Routes>

@@ -140,7 +140,6 @@ const Navbar = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <First />
     </div>
   );
 };
