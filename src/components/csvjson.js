@@ -1,11 +1,7 @@
 import React from "react";
 export const data = [
-  //   // ["Word", "Target", "Weight"],
-  //   // ["AN", "Female", 6],
-  //   // ["Aaron", "Female", 3],
-  //   // ["Abbey", "Male", 8],
-  //   // ["Abbotsford", "Female", 1],
-  //   // ["Abdul", "Female", 0],
+  ["Word", "Target", "Weight"],
+
   //   //
   ["since", "None", 23],
   ["gallery", "None", 2],
