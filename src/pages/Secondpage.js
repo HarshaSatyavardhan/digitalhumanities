@@ -26,7 +26,7 @@ const Secondpage = () => {
       </Typography>
       <IpynbRenderer
         ipynb={ipynb}
-        syntaxTheme="xonokai"
+        syntaxTheme="funky"
         language="python"
         bgTransparent={true}
         formulaOptions={{
