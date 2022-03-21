@@ -11,8 +11,8 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import First from "../components/First";
 import { Link } from "react-router-dom";
+import Stack from "@mui/material/Stack";
 
 const pages = ["Viz-1", "Viz-2", "Viz-3"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -38,9 +38,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: "#0064ff" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
+            <Stack direction="row" spacing={2} sx={{ p: 2 }}>
+              <Avatar alt="DH" src="./dh-name.png" />
+            </Stack>
             <Typography
               variant="h6"
               noWrap
