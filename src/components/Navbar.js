@@ -38,12 +38,9 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="static" style={{ background: "#0064ff" }}>
+      <AppBar position="static" style={{ background: "#1976d2" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Stack direction="row" spacing={2} sx={{ p: 2 }}>
-              <Avatar alt="DH" src="./dh-name.png" />
-            </Stack>
             <Typography
               variant="h6"
               noWrap
